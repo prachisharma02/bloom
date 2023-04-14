@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const chatModel = mongoose.schema(
+  //defining schema
   {
     chatName: { type: String, trim: true }, //chat is of type string and trim always true as to remove extra space
     isgroupchat: { type: Boolean, default: false }, // groupchat is not always so it will be either true or false
@@ -24,5 +25,5 @@ const chatModel = mongoose.schema(
     timestamp: true,
   }
 );
-const Chat = mongoose.model("Chat", chatModel);
+const Chat = mongoose.model("Chat", chatModel); //converting into model
 module.exports = Chat;
